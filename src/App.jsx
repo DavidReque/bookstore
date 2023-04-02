@@ -1,7 +1,7 @@
 import './App.css'
 import { Route, Routes, BrowserRouter } from 'react-router-dom'
 import Index from './pages/Index'
-import Create from './pages/create'
+import Create from './pages/Create'
 import View from './pages/view'
 
 function App() {
