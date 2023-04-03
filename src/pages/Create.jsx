@@ -35,29 +35,29 @@ const Create = () => {
   };
 
   const handleOnChangeFile = (e) => {
-    const element = e.target
-    const file = element.files[0]
-    const reader = new FileReader()
+    const element = e.target;
+    const file = element.files[0];
+    const reader = new FileReader();
 
-    reader.readAsDataURL(file)
+    reader.readAsDataURL(file);
 
-    reader.onloadend = function() {
-        setCover(reader.result.toString())
-    }
+    reader.onloadend = function () {
+      setCover(reader.result.toString());
+    };
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     const newBook = {
-        id: crypto.randomUUID(),
-        title,
-        author,
-        cover,
-        intro, 
-        completed, 
-        review
-    }
+      id: crypto.randomUUID(),
+      title,
+      author,
+      cover,
+      intro,
+      completed,
+      review,
+    };
 
     //TODO: Mandar a registrar libro
   };
@@ -88,7 +88,9 @@ const Create = () => {
         <div>
           <div>Cover</div>
           <input type="file" name="cover" onChange={handleOnChangeFile} />
-          <div>{!!cover ? <img src={cover} width='200' alt="preview"/> : ''}</div>
+          <div>
+            {!!cover ? <img src={cover} width="200" alt="preview" /> : ""}
+          </div>
         </div>
 
         <div>
@@ -121,7 +123,7 @@ const Create = () => {
           />
         </div>
 
-        <input type="submit" value='Register book' />
+        <input type="submit" value="Register book" />
       </form>
     </div>
   );
