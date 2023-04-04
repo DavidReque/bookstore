@@ -43,3 +43,7 @@ export default function Store({ children }) {
     </AppContext.Provider>
   );
 }
+
+export function useAppContext() {
+  return useContext(AppContext)
+}

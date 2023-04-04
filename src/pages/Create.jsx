@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useAppContext } from "../store/store";
 
 const Create = () => {
   const [title, setTitle] = useState("");
@@ -7,6 +8,8 @@ const Create = () => {
   const [intro, setIntro] = useState("");
   const [completed, setCompleted] = useState(false);
   const [review, setReview] = useState("");
+
+  const store = useAppContext()
 
   const handleChange = (e) => {
     const name = e.target.name;
@@ -60,6 +63,7 @@ const Create = () => {
     };
 
     //TODO: Mandar a registrar libro
+    store.createItem(newBook)
   };
 
   return (
