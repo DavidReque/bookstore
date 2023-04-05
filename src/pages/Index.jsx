@@ -1,3 +1,4 @@
+import Book from "../components/Book";
 import Layaout from "../components/Layaout";
 import { useAppContext } from "../store/store";
 
@@ -7,9 +8,7 @@ const Index = () => {
   return (
     <Layaout>
       {store.items.map((item) => (
-        <div key={item.id}>
-          <h1>{item.title}</h1>
-        </div>
+       <Book key={item.id} item={item}/>
       ))}
     </Layaout>
   );
