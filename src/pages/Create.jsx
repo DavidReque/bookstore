@@ -38,15 +38,15 @@ const Create = () => {
   };
 
   const buttonStyle = {
-    padding: '15px 20px',
-    minWidth: '200px',
-    border: 'none',
-    borderRadius: '5px',
-    backgroundColor: '#1e9638',
+    padding: "15px 20px",
+    minWidth: "200px",
+    border: "none",
+    borderRadius: "5px",
+    backgroundColor: "#1e9638",
     color: "white",
-    fontWeigth: 'bolder',
-    fontSize: '18px'
-  }
+    fontWeigth: "bolder",
+    fontSize: "18px",
+  };
 
   const handleChange = (e) => {
     const name = e.target.name;
@@ -148,7 +148,7 @@ const Create = () => {
           />
         </div>
 
-        <div >
+        <div>
           <div style={inputStyles.title}>Completed</div>
           <input
             type="checkbox"
