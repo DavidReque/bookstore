@@ -1,18 +1,17 @@
+import Layaout from "../components/Layaout";
 import { useAppContext } from "../store/store";
-import { Link } from "react-router-dom";
 
 const Index = () => {
   const store = useAppContext();
 
   return (
-    <div>
-    <Link to='/create'>Create</Link>
+    <Layaout>
       {store.items.map((item) => (
         <div key={item.id}>
-            <h1>{item.title}</h1>
+          <h1>{item.title}</h1>
         </div>
       ))}
-    </div>
+    </Layaout>
   );
 };
 

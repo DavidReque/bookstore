@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useAppContext } from "../store/store";
-import { Link } from "react-router-dom";
+import Layaout from "../components/Layaout";
 
 const Create = () => {
   const [title, setTitle] = useState("");
@@ -68,8 +68,7 @@ const Create = () => {
   };
 
   return (
-    <div>
-    <Link to='/'>Home</Link>
+    <Layaout>
       <form onSubmit={handleSubmit}>
         <div>
           <div>Title</div>
@@ -131,7 +130,7 @@ const Create = () => {
 
         <input type="submit" value="Register book" />
       </form>
-    </div>
+    </Layaout>
   );
 };
 

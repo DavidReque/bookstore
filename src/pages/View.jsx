@@ -1,8 +1,10 @@
+import Layaout from "../components/Layaout";
+
 const View = () => {
     return (
-        <div>
+        <Layaout>
             View
-        </div>
+        </Layaout>
     );
 }
 
