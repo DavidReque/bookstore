@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useAppContext } from "../store/store";
+import { Link } from "react-router-dom";
 
 const Create = () => {
   const [title, setTitle] = useState("");
@@ -68,6 +69,7 @@ const Create = () => {
 
   return (
     <div>
+    <Link to='/'>Home</Link>
       <form onSubmit={handleSubmit}>
         <div>
           <div>Title</div>
