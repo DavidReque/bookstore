@@ -10,7 +10,7 @@ const Create = () => {
   const [completed, setCompleted] = useState(false);
   const [review, setReview] = useState("");
 
-  const store = useAppContext()
+  const store = useAppContext();
 
   const handleChange = (e) => {
     const name = e.target.name;
@@ -64,7 +64,7 @@ const Create = () => {
     };
 
     //TODO: Mandar a registrar libro
-    store.createItem(newBook)
+    store.createItem(newBook);
   };
 
   return (

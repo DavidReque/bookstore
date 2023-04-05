@@ -8,7 +8,7 @@ const Index = () => {
   return (
     <Layaout>
       {store.items.map((item) => (
-       <Book key={item.id} item={item}/>
+        <Book key={item.id} item={item} />
       ))}
     </Layaout>
   );

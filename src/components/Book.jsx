@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Book({item}) {
+function Book({ item }) {
   return (
     <div>
       <Link to={`/view/${item.id}`}>

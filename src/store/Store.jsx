@@ -45,5 +45,5 @@ export default function Store({ children }) {
 }
 
 export function useAppContext() {
-  return useContext(AppContext)
+  return useContext(AppContext);
 }
