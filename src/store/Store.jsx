@@ -21,10 +21,10 @@ export default function Store({ children }) {
   function saveToLocalStorage(items) {
     localStorage.setItem("books", JSON.stringify(items));
   }
-  
+
   useEffect(() => {
     loadFromLocalStorage();
-  }, []);  
+  }, []);
 
   function createItem(item) {
     const temp = [...items];
