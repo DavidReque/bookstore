@@ -10,11 +10,28 @@ const AppContext = createContext({
 export default function Store({ children }) {
   const [items, setItems] = useState([]);
 
+  function loadFromLocalStorage() {
+    const storedBooks = localStorage.getItem("books");
+    if (storedBooks) {
+      const parsedBooks = JSON.parse(storedBooks);
+      setItems(parsedBooks);
+    }
+  }
+
+  function saveToLocalStorage(items) {
+    localStorage.setItem("books", JSON.stringify(items));
+  }
+  
+  useEffect(() => {
+    loadFromLocalStorage();
+  }, []);  
+
   function createItem(item) {
     const temp = [...items];
     temp.push(item);
 
     setItems(temp);
+    saveToLocalStorage(temp);
   }
 
   function getItem(id) {
@@ -26,8 +43,10 @@ export default function Store({ children }) {
   function updateItem(item) {
     const index = items.findIndex((i) => i.id === item.id);
     const temp = [...items];
-
     temp[index] = { ...item };
+
+    setItems(temp);
+    saveToLocalStorage(temp);
   }
 
   return (
