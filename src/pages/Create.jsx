@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useAppContext } from "../store/store";
 import Layaout from "../components/Layaout";
+import { useNavigate } from "react-router-dom";
 
 const Create = () => {
   const [title, setTitle] = useState("");
@@ -11,6 +12,7 @@ const Create = () => {
   const [review, setReview] = useState("");
 
   const store = useAppContext();
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const name = e.target.name;
@@ -65,6 +67,7 @@ const Create = () => {
 
     //TODO: Mandar a registrar libro
     store.createItem(newBook);
+    navigate("/");
   };
 
   return (
