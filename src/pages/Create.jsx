@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useAppContext } from "../store/store";
 import Layaout from "../components/Layaout";
 import { useNavigate } from "react-router-dom";
+import { buttonStyle, inputStyles } from "../../Styles/styles";
 
 const Create = () => {
   const [title, setTitle] = useState("");
@@ -13,40 +14,6 @@ const Create = () => {
 
   const store = useAppContext();
   const navigate = useNavigate();
-
-  const inputStyles = {
-    formContainer: {
-      width: "400px",
-      margin: "0 auto",
-    },
-    container: {
-      display: "flex",
-      flexDirection: "column",
-      gap: "5px",
-      margin: "15px 0",
-    },
-    title: {
-      fontSize: "16px",
-      textAlign: "left",
-      color: "white",
-    },
-    input: {
-      padding: "10px",
-      borderRadius: "5px",
-      fontSize: "16px",
-    },
-  };
-
-  const buttonStyle = {
-    padding: "15px 20px",
-    minWidth: "200px",
-    border: "none",
-    borderRadius: "5px",
-    backgroundColor: "#1e9638",
-    color: "white",
-    fontWeigth: "bolder",
-    fontSize: "18px",
-  };
 
   const handleChange = (e) => {
     const name = e.target.name;

@@ -2,21 +2,12 @@ import { useParams } from "react-router-dom";
 import Layaout from "../components/Layaout";
 import { useEffect, useState } from "react";
 import { useAppContext } from "../store/store";
+import { itemStyles } from "../../Styles/styles";
 
 const View = () => {
   const [item, setItem] = useState({});
   const params = useParams();
   const store = useAppContext();
-
-  const itemStyles = {
-    container: {
-      display: "flex",
-      gap: "20px",
-      color: "white",
-      width: "800px",
-      margin: "0 auto",
-    },
-  };
 
   useEffect(() => {
     const book = store.getItem(params.bookId);
