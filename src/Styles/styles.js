@@ -41,11 +41,41 @@ export const inputStyles = {
 };
 
 export const itemStyles = {
-    container: {
-      display: "flex",
-      gap: "20px",
-      color: "white",
-      width: "800px",
-      margin: "0 auto",
-    },
-  };
+  container: {
+    display: "flex",
+    gap: "20px",
+    color: "white",
+    width: "800px",
+    margin: "0 auto",
+  },
+};
+
+export const navContainerStyle = {
+  padding: "10px",
+  gap: "5px",
+  justifyContent: "center",
+};
+
+export const linkStyle = {
+  padding: "10px",
+  fontSize: "18px",
+  color: "white",
+};
+
+export const containerStyle = {
+  with: "90%",
+  margin: "100px auto",
+};
+
+export const bookContainerStyle = {
+  display: "flex",
+  flexDirection: "column",
+  with: "300px",
+};
+
+export const bookInfoStyle = {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  textAlign: "center",
+};

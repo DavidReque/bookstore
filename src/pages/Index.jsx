@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Book from "../components/Book";
 import Layaout from "../components/Layaout";
 import { useAppContext } from "../store/store";
-import { booksContainer, buttonStyle,  } from "../../Styles/styles";
+import { booksContainer, buttonStyle } from "../Styles/styles";
 
 const Index = () => {
   const store = useAppContext();
@@ -17,7 +17,9 @@ const Index = () => {
             </div>
           ))
         ) : (
-          <Link style={buttonStyle} to="/create">Add book</Link>
+          <Link style={buttonStyle} to="/create">
+            Add book
+          </Link>
         )}
       </div>
     </Layaout>

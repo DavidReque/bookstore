@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useAppContext } from "../store/store";
 import Layaout from "../components/Layaout";
 import { useNavigate } from "react-router-dom";
-import { buttonStyle, inputStyles } from "../../Styles/styles";
+import { buttonStyle, inputStyles } from "../Styles/styles";
 
 const Create = () => {
   const [title, setTitle] = useState("");

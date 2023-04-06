@@ -1,18 +1,7 @@
 import { Link } from "react-router-dom";
+import { bookContainerStyle, bookInfoStyle } from "../Styles/styles";
 
 function Book({ item }) {
-  const bookContainerStyle = {
-    display: "flex",
-    flexDirection: "column",
-    with: "300px",
-  };
-
-  const bookInfoStyle = {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    textAlign: "center",
-  };
   return (
     <div style={bookContainerStyle}>
       <Link to={`/view/${item.id}`} style={bookInfoStyle}>

@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import Layaout from "../components/Layaout";
 import { useEffect, useState } from "react";
 import { useAppContext } from "../store/store";
-import { itemStyles } from "../../Styles/styles";
+import { itemStyles } from "../Styles/styles";
 
 const View = () => {
   const [item, setItem] = useState({});
