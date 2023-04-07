@@ -7,7 +7,7 @@ const AppContext = createContext({
   updateItem: (item) => {},
 });
 
-export default function Store({ children }) {
+export default function store({ children }) {
   const [items, setItems] = useState([]);
 
   function loadFromLocalStorage() {
